@@ -1,5 +1,6 @@
 use std::io::stdin;
 
+// TODO: make players have number associated for easier dynamic selection in runtime
 enum Player {
     Annabella,
     Carolyn,
@@ -20,7 +21,8 @@ fn choose_player() {
         2 => Player::Carolyn,
         3 => Player::Jessica,
         4 => Player::Kennon,
-        _ => Player::Annabella,
+        _ => Player::Annabella, //TODO: need to change this so that we keep calling the function until a
+                                // valid choice is made
     };
 }
 
@@ -38,8 +40,17 @@ fn title_msg() {
 
 fn main() {
     title_msg();
-    // pause(); // pause the game
-
-    // title_prompt(); // prompt the user to start the game
+    // TODO: PAUSE until key event
+    // TODO: prompt the user to start the game
+    // TODO: when user key detected, continue:
     choose_player();
+    // TODO: save player choice as player
+    // TODO: start the game
+    // TODO: display the game board
+    // TODO: prompt the user to make a move
+    // TODO: step 1 - 14
+    // TODO: check for winner
+    // TODO: if winner, display winner
+    // TODO: if no winner, display next step
+    // TODO: add in players throughout the story
 }
