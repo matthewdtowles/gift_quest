@@ -1,17 +1,20 @@
+mod view;
+mod level;
+
 use std::io::{self, Write};
 
-mod levels {
-    pub mod level_one;
-}
+use level::level_one;
+use view::text::text;
+
 
 fn choose_player() -> String {
-    green_text("Who embarks on this journey?");
+    println!("{}", text::green_text("Who embarks on this journey?"));
     let mut user_input = String::new();
     io::stdin()
         .read_line(&mut user_input)
         .expect("Failed to read line");
     loading_msg();
-    let msg = format!("Ah! So your name is '{}'?", user_input.trim());
+    let msg = format!("Ah! So your name is {}?", user_input.trim());
     if !confirm_input(&msg) {
         return choose_player();
     }
@@ -19,31 +22,15 @@ fn choose_player() -> String {
 }
 
 fn continue_prompt() {
-    red_text("Press ENTER to continue...");
+    println!("{}", text::red_text("Press ENTER to continue..."));
     let mut user_input = String::new();
     io::stdout().flush().unwrap();
     io::stdin().read_line(&mut user_input).unwrap();
 }
 
-fn red_text(text: &str) {
-    println!("\x1b[31m{}\x1b[0m", text);
-}
-
-fn green_text(text: &str) {
-    println!("\x1b[32m{}\x1b[0m", text);
-}
-
-fn yellow_text(text: &str) {
-    println!("\x1b[33m{}\x1b[0m", text);
-}
-
-fn blue_text(text: &str) {
-    println!("\x1b[34m{}\x1b[0m", text);
-}
-
 fn confirm_input(msg: &str) -> bool {
     let msg = format!("{} (y/n)", msg);
-    green_text(&msg);
+    println!("{}", text::green_text(&msg));
     let mut user_input = String::new();
     io::stdout().flush().unwrap();
     io::stdin().read_line(&mut user_input).unwrap();
@@ -51,7 +38,7 @@ fn confirm_input(msg: &str) -> bool {
         "y" | "Y" | "yes" | "Yes" => true,
         "n" | "N" | "no" | "No" => false,
         _ => {
-            red_text("Please enter 'y' or 'n'");
+            println!("{}", text::red_text("Please enter 'y' or 'n'"));
             confirm_input(&msg)
         }
     }
@@ -93,7 +80,7 @@ fn title_msg() {
     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
                                                                                                      "#;
-    yellow_text(banner);
+    println!("{}", text::yellow_text(banner));
 }
 
 fn clear_screen() {
@@ -125,5 +112,5 @@ fn main() {
     intro_msg(&player);
     continue_prompt();
     loading_msg();
-    levels::level_one::run();
+    level_one::run();
 }
