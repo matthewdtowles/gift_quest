@@ -14,7 +14,7 @@
             "id": 2,
             "title": "The Locked Gate",
             "story": "\n\tThe torchlight flickers to reveal a locked gate.\n\tTo move forward, you must uncover what will open the way.\n\tSometimes, the simplest tools unlock the greatest secrets.",
-            "riddle": "\n\n\t\tWhat opens doors without hands?\n\t\tWhat can break without force?\n\t\tWhat can enter without a body?\n\t\tWhat can see without eyes?\n\t\tWhat can speak without a voice?\n",
+            "riddle": "\n\n\t\tWhat opens doors without hands?\n\t\tWhat can break without force?\n\t\tWhat can enter without a body?\n",
             "answer": "key",
             "failure_message": "It can fit in your palm, yet can open even the strongest barriers.",
             "success_message": "The gate opens revealing new mysteries. Knowledge will always find the way."
