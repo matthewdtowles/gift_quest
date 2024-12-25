@@ -1,23 +1,10 @@
-mod level;
+mod levels;
 mod view;
+mod player;
 
-use level::level_one;
-use std::io;
-use view::{screen, text};
-
-fn choose_player() -> String {
-    println!("{}", text::green_text("Who embarks on this journey?"));
-    let mut user_input = String::new();
-    io::stdin()
-        .read_line(&mut user_input)
-        .expect("Failed to read line");
-    screen::display_loading();
-    let msg = format!("Ah! So your name is {}?", user_input.trim());
-    if !screen::confirm_input(&msg) {
-        return choose_player();
-    }
-    user_input.trim().to_string()
-}
+use levels::level;
+use view::screen;
+use player::Player;
 
 fn intro_msg(_player: &String) {
     let intro = format!(
@@ -42,10 +29,10 @@ fn intro_msg(_player: &String) {
 fn main() {
     screen::display_title();
     screen::clear_display();
-    let player = choose_player();
+    let player = Player::new();
     screen::display_loading();
-    intro_msg(&player);
+    intro_msg(player.name());
     screen::continue_prompt();
     screen::display_loading();
-    level_one::run();
+    level::run();
 }
