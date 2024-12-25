@@ -2,13 +2,31 @@
     "intro": "\n\n\tI am a spirit, bound to this realm by an unfulfilled purpose.\n\n\tLong ago, I sought to deliver a gift of immeasurable value (approximately $25 in today's currency).\n\n\tAlas, my time ended before I could complete my task.\n\n\tNow, I can only guide another to finish what I could not.\n\n\tHelp me complete my quest and I will guide you through the trials that await you.",
     "levels": [
         {
-            "order": 1,
+            "id": 1,
             "title": "Level 1: The Unlit Path",
             "story": "\n\tA soft, ethereal voice slowly fills the air, a voice that only you can hear.\n\tIt seems to come from everywhere at once, like a whisper carried by the wind.\n\n\tThe voice speaks:\n\n\t\t\"I am the spirit of knowledge, bound to the darkness of ignorance.\n\t\tIn this world of shadows, the truth and knowledge are the light that guides the way.\n\t\tBut this truth has been obscured, and only those who are worthy may bring forth the light.\n\t\tI sense something in you. Prove you are worthy and I shall grant you the torch to illuminate your way.\"",
             "riddle":"\n\n\t\tI am forever in front, yet never out of reach,\n\t\tA beacon in darkness, where clarity must teach,\n\t\tI am sought by the wise, but shunned by the fool,\n\t\tA treasure to the seeker, a weapon to the cruel,\n\t\tEternal and pure, though shadows I show,\n\t\tI hold no shape, yet I shape what you know.\n\n\t\tWhat am I?",
             "answer": "truth",
-            "failure": "The voice speaks: 'Try again, for we both seek not falsehood.'",
-            "success": "The voice speaks: 'You have proven yourself worthy. Take this torch and light your way.'"
+            "failure_message": "The voice speaks: 'Try again, for we both seek not falsehood.'",
+            "success_message": "The voice speaks: 'You have proven yourself worthy. Take this torch and light your way.'"
+        },
+        {
+            "id": 2,
+            "title": "Level 2: The Whispering Woods",
+            "story": "\n\tThe torch flickers and casts long shadows on the trees as you walk through the dense forest.\n\tThe voice speaks again, its tone more urgent",
+            "riddle": "\n\n\t\tI am the voice of the wind, the whisper of the trees,\n\t\tI carry secrets untold, and tales of the breeze,\n\t\tI am heard but not seen, a presence unseen,\n\t\tI am the echo of silence, the ghost in between,\n\t\tI am the song of the earth, the breath of the night,\n\t\tI am the unseen force that guides you to the light.\n\n\t\tWhat am I?",
+            "answer": "nature",
+            "failure_message": "The voice speaks: 'Try again, for we both seek not falsehood.'",
+            "success_message": "The voice speaks: 'You have proven yourself worthy. Take this torch and light your way.'"
+        },
+        {
+            "id": 99,
+            "title": "Level 99: The Final Trial",
+            "story": "\n\tThe voice speaks again, its tone more urgent",
+            "riddle": "\n\n\t\tI am the end of all things, the beginning of time,\n\t\tI am the darkness of night, the light of the divine,\n\t\tI am the echo of silence, the whisper of the wind,\n\t\tI am the shadow of truth, the lie that's within,\n\t\tI am the key to the door, the lock to the gate,\n\t\tI am the answer you seek, the question of fate.\n\n\t\tWhat am I?",
+            "answer": "death",
+            "failure_message": "The voice speaks: 'Try again, for we both seek not falsehood.'",
+            "success_message": "The voice speaks: 'You have proven yourself worthy. Take this torch and light your way.'"
         }
     ]
 }
