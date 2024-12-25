@@ -16,14 +16,14 @@ pub fn confirm_input(msg: &str) -> bool {
         "y" | "Y" | "yes" | "Yes" => true,
         "n" | "N" | "no" | "No" => false,
         _ => {
-            println!("{}", text::red_text("Please enter 'y' or 'n'"));
+            println!("{}", text::red_text("\n\t\tPlease enter 'y' or 'n'"));
             confirm_input(&msg)
         }
     }
 }
 
 pub fn continue_prompt() {
-    println!("{}", text::red_text("Press ENTER to continue..."));
+    println!("{}", text::red_text("\n\t\tPress ENTER to continue..."));
     let mut user_input = String::new();
     io::stdout().flush().unwrap();
     io::stdin().read_line(&mut user_input).unwrap();

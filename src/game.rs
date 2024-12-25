@@ -9,11 +9,13 @@ use std::fs;
 struct GameText {
     intro: String,
     levels: Vec<LevelConfig>,
+    secret_code: String,
 }
 
 pub struct Game {
     player: Player,
     levels: Vec<Level>,
+    secret_code: String,
 }
 
 impl Game {
@@ -21,7 +23,8 @@ impl Game {
         let player = Player::new();
         let config = Self::load_config();
         let levels = config.levels.into_iter().map(Level::new).collect();
-        Self { player, levels }
+        let secret_code: String = config.secret_code;
+        Self { player, levels, secret_code }
     }
 
     pub fn run(&self) {
@@ -29,7 +32,7 @@ impl Game {
         for level in &self.levels {
             level.run();
             screen::continue_prompt();
-            screen::clear_display();
+            screen::display_loading();
         }
         self.conclusion();
     }
@@ -38,7 +41,7 @@ impl Game {
         let config = Self::load_config();
         println!("{}", text::green_text(&config.intro));
         screen::continue_prompt();
-        screen::clear_display();
+        screen::display_loading();
     }
 
     fn load_config() -> GameText {
@@ -47,15 +50,14 @@ impl Game {
         serde_json::from_str(&content).expect("Failed to parse game configuration")
     }
 
-    // TODO: cleanup/polish ending
     fn conclusion(&self) {
         let success = format!(
-            "Congratulations, {}! You have proven yourself worthy.",
+            "\n\tCongratulations, {}! You have proven yourself worthy.",
             self.player.name()
         );
         println!("{}", text::green_text(&success));
-        println!("The code before you unlocks your prize -- and my freedom. May the light you carry guide you always.");
-        println!("\n{}\n", text::yellow_text("997"));
+        println!("\n\tThe code before you unlocks your prize -- and my freedom. May the light you carry guide you always.");
+        println!("\n\n\t\t{}\n", text::yellow_text(&self.secret_code));
         screen::continue_prompt();
         clear_display();
         screen::display_title();
