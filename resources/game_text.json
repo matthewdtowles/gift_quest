@@ -3,30 +3,120 @@
     "levels": [
         {
             "id": 1,
-            "title": "Level 1: The Unlit Path",
+            "title": "The Beginning",
             "story": "\n\tA soft, ethereal voice slowly fills the air, a voice that only you can hear.\n\tIt seems to come from everywhere at once, like a whisper carried by the wind.\n\n\tThe voice speaks:\n\n\t\t\"I am the spirit of knowledge, bound to the darkness of ignorance.\n\t\tIn this world of shadows, the truth and knowledge are the light that guides the way.\n\t\tBut this truth has been obscured, and only those who are worthy may bring forth the light.\n\t\tI sense something in you. Prove you are worthy and I shall grant you the torch to illuminate your way.\"",
-            "riddle":"\n\n\t\tI am forever in front, yet never out of reach,\n\t\tA beacon in darkness, where clarity must teach,\n\t\tI am sought by the wise, but shunned by the fool,\n\t\tA treasure to the seeker, a weapon to the cruel,\n\t\tEternal and pure, though shadows I show,\n\t\tI hold no shape, yet I shape what you know.\n\n\t\tWhat am I?",
+            "riddle":"\n\n\t\tI am forever in front, yet never out of reach,\n\t\tA beacon in darkness, where clarity must teach,\n\t\tI am sought by the wise, but shunned by the fool,\n\t\tA treasure to the seeker, a weapon to the cruel,\n\t\tEternal and pure, though shadows I show,\n\t\tI hold no shape, yet I shape what you know.\n",
             "answer": "truth",
-            "failure_message": "The voice speaks: 'Try again, for we both seek not falsehood.'",
-            "success_message": "The voice speaks: 'You have proven yourself worthy. Take this torch and light your way.'"
+            "failure_message": "You seek something intangible but fundamental. What do all answers lead back to?",
+            "success_message": "You now carry the torch of understanding. Let it light your way."
         },
         {
             "id": 2,
-            "title": "Level 2: The Whispering Woods",
-            "story": "\n\tThe torch flickers and casts long shadows on the trees as you walk through the dense forest.\n\tThe voice speaks again, its tone more urgent",
-            "riddle": "\n\n\t\tI am the voice of the wind, the whisper of the trees,\n\t\tI carry secrets untold, and tales of the breeze,\n\t\tI am heard but not seen, a presence unseen,\n\t\tI am the echo of silence, the ghost in between,\n\t\tI am the song of the earth, the breath of the night,\n\t\tI am the unseen force that guides you to the light.\n\n\t\tWhat am I?",
-            "answer": "nature",
-            "failure_message": "The voice speaks: 'Try again, for we both seek not falsehood.'",
-            "success_message": "The voice speaks: 'You have proven yourself worthy. Take this torch and light your way.'"
+            "title": "The Locked Gate",
+            "story": "\n\tThe torchlight flickers to reveal a locked gate.\n\tTo move forward, you must uncover what will open the way.\n\tSometimes, the simplest tools unlock the greatest secrets.",
+            "riddle": "\n\n\t\tWhat opens doors without hands?\n\t\tWhat can break without force?\n\t\tWhat can enter without a body?\n\t\tWhat can see without eyes?\n\t\tWhat can speak without a voice?\n",
+            "answer": "key",
+            "failure_message": "It can fit in your palm, yet can open even the strongest barriers.",
+            "success_message": "The gate opens revealing new mysteries. Knowledge will always find the way."
         },
         {
-            "id": 99,
-            "title": "Level 99: The Final Trial",
-            "story": "\n\tThe voice speaks again, its tone more urgent",
-            "riddle": "\n\n\t\tI am the end of all things, the beginning of time,\n\t\tI am the darkness of night, the light of the divine,\n\t\tI am the echo of silence, the whisper of the wind,\n\t\tI am the shadow of truth, the lie that's within,\n\t\tI am the key to the door, the lock to the gate,\n\t\tI am the answer you seek, the question of fate.\n\n\t\tWhat am I?",
-            "answer": "death",
-            "failure_message": "The voice speaks: 'Try again, for we both seek not falsehood.'",
-            "success_message": "The voice speaks: 'You have proven yourself worthy. Take this torch and light your way.'"
+            "id": 3,
+            "title": "The Journey Begins",
+            "story": "\n\tThe gate creaks open to reveal a winding road. \n\tThe way forwaard is unclear",
+            "riddle": "\n\n\t\tWhat lies ahead, but never moves?\n\t\tWhat follows behind, but never leaves?\n\t\tA journey unfolds, and I am its guide.\n",
+            "answer": "path",
+            "failure_message": "I am always forward-facing. To find me, you must simply take the next step.",
+            "success_message": "You have chosen wisely. The path is clear before you."
+        },
+        {
+            "id": 4,
+            "title": "The Sundial",
+            "story": "\n\tA sundial stands before you, its shadow shifting with the movement of unseen forces.\n\tThe spirit asks, \"What governs the rhythm of all things? \n\tWithout it, all would be chaos.\"",
+            "riddle": "\n\n\t\tI fly without wings and I never rest.\n\t\tI carry all, yet cannot be held.\n\t\tI march forward, leaving nothing the same.\n",
+            "answer": "time",
+            "failure_message": "It moves the hands of the clock, yet remains untouched by its passage.",
+            "success_message": "Time moves ever forward, and so do you."
+        },
+        {
+            "id": 5,
+            "title": "The Core",
+            "story": "\n\tAn unmarked building lies ahead. \n\tMarching towards it, the spirit advises, \"Every journey requires courage, and every choice must come from within.\n\tWhat lies at the center of all things?\n\tIt beats endlessly, the essence of life itself.\n\tWithout it, there is no drive to continue.\"",
+            "riddle": "\n\n\t\tWithin me lies courage, love, and might\n\t\tI beat unending through day and night.\n\t\tI am the core of all that you are\n\t\tWithout me, you would not go far.\n",
+            "answer": "heart",
+            "failure_message": "It beats within you, driving you forward. It is vital, yet unseen.",
+            "success_message": "The essence of life itself eats strong within you. You have found the heart of this challenge."
+        },
+        {
+            "id": 6,
+            "title": "The Reflection",
+            "story": "\n\tYou enter the building and see reflections of yourself along the walls down a narrow hall.\n\tThe spirit asks, \"What do you see when you look within? \n\tDo you see the truth, or only what you wish to see?\"",
+            "riddle": "\n\n\t\tI show you the world, yet I do not speak.\n\t\tI am lifeless, yet I reveal your face.\n\t\tI am the lies you hide and the truth you seek.\n",
+            "answer": "mirror",
+            "failure_message": "It shows you the world, yet cannot touch it. What reflects the truth within you?",
+            "success_message": "You have seen through the illusion. The mirror reveals the truth within."
+        },
+        {
+            "id": 7,
+            "title": "The Whispering Wick",
+            "story": "\n\tA cold wind sweeps through, and darkness encroaches.\n\tThe spirit speaks: \"You must summon what sustains the warmth. \n\tWithout it, the cold will claim us. \n\tThis force brings both life and destruction.\"",
+            "riddle": "\n\n\t\tBorn of friction, yet I can burn bright.\n\t\tI banish the dark and give heat to the night.\n\t\tFeed me and I thrive; starve me and I die.\n",
+            "answer": "fire",
+            "failure_message": "What is sparked by a match but grows when fed? It brings light and warmth together.",
+            "success_message": "A small fire flickers to life. You have kindled hope in the cold darkness. The way is warmed."
+        },
+        {
+            "id": 8,
+            "title": "The Night Sky",
+            "story": "\n\tThe spirit murmurs, \"Look to the heavens. \n\tEven in the darkest of nights, what guides the travelers through the endless night?\n\tThese celestial lights have watched over us since the dawn of time.\"",
+            "riddle": "\n\n\t\tI shine above, though I am far.\n\t\tI am fixed in place, yet I light the sky.\n\t\tYou are too soon if you arrive at the moon.\n",
+            "answer": "star",
+            "failure_message": "It is a light in the vast darkness of the night sky.",
+            "success_message": "The night sky brightens with the light of a thousand stars. The stars are always watching."
+        },
+        {
+            "id": 9,
+            "title": "The Voice of the Void",
+            "story": "\n\tThe spirit pauses and a voice calls out from the void, repeating your every word.\n\t\"In this cavern of voices, what do you hear?\n\tIt is not the source, but the answer comes from repetition itself.\"",
+            "riddle": "\n\n\t\tI repeat what is said, yet I have no voice.\n\t\tI come back to you, though I have no choice. \n\t\tI exist where sound meets the stone.",
+            "answer": "echo",
+            "failure_message": "It is a sound returned to you, always the same, never its own.",
+            "success_message": "The cavern falls silent, leaving only clarity. An echo teaches us to listen."
+        },
+        {
+            "id": 10,
+            "title": "The Eternal",
+            "story": "\n\tYou reach an open field where a symbol glows on the ground, endless and complete. \n\tThe spirit explains, \"This shape is eternal, without beginning or end. \n\tIt is both simple and infinite.\"",
+            "riddle": "\n\n\t\tI have no start, yet I have no end. \n\t\tI am the path that curves to meet my friend. \n\t\tI enclose space but leave none to waste.",
+            "answer": "circle",
+            "failure_message": "It is a shape that loops endlessly, neither starting nor stopping.",
+            "success_message": "The glowing symbol hums with energy. A circle binds everything together. We are closer now."
+        },
+        {
+            "id": 11,
+            "title": "The Connection",
+            "story": "\n\tA chasm stretches before you, and the spirit points to a structure spanning the void. \n\t\"To cross this, you must name it. \n\tIt connects what was once divided, yet it cannot move on its own.\"",
+            "riddle": "\n\n\t\tI connect the distant and make them near. \n\t\tOver water or void, I end your fear. \n\t\tI do not move, yet I help you traverse.",
+            "answer": "bridge",
+            "failure_message": "It spans great gaps, yet it does not move itself. It unites what was once divided.",
+            "success_message": "The chasm fades, replaced by a solid path. The bridge carries us forward."
+        },
+        {
+            "id": 12,
+            "title": "The Dark Companion",
+            "story": "\n\tDarkness stretches at your feet, always following. \n\tThe spirit asks, \"What is bound to you, yet disappears in the dark? \n\tIt is your companion, but you cannot grasp it.\"",
+            "riddle": "\n\n\t\tI follow you, yet I am not alive. \n\t\tI stretch and shrink but cannot survive. \n\t\tWithout light, I cannot be found.",
+            "answer": "shadow",
+            "failure_message": "It is always with you when there is light, but vanishes in complete darkness.",
+            "success_message": "The shadows dance briefly before settling. Even shadows remind us of the light."
+        },
+        {
+            "id": 13,
+            "title": "The End",
+            "story": "\n\tAt the end of the path, the spirit turns to you. \n\t\"One final question remains,\" it says. \n\t\"Through all the trials, you have gained something intangible, yet invaluable. \n\tIt is the essence of understanding itself.\"",
+            "riddle": "\n\n\t\tI cannot be seen, yet I am sought. \n\t\tI grow with time, though I am not bought. \n\t\tI guide decisions and clear the haze. \n\t\tI light the path through life's maze. \n\t\tI come with age, though not guaranteed.  \n\t\tI am the key to all you have freed",
+            "answer": "wisdom",
+            "failure_message": "Through experience and learning, it is gained, though it cannot be touched.",
+            "success_message": "The spirit smiles. \"With wisdom, you have freed me - and earned your reward. Farewell, seeker.\""
         }
     ]
 }

@@ -1,5 +1,6 @@
 use crate::levels::level::{Level, LevelConfig};
 use crate::player::Player;
+use crate::view::screen::clear_display;
 use crate::view::{screen, text};
 use serde::Deserialize;
 use std::fs;
@@ -24,18 +25,13 @@ impl Game {
     }
 
     pub fn run(&self) {
-        // screen::display_title();
         self.show_intro();
         for level in &self.levels {
             level.run();
             screen::continue_prompt();
             screen::clear_display();
         }
-        let success = format!(
-            "Congratulations, {}! You have completed your quest and proven yourself worthy. The secret code is: ",
-            self.player.name()
-        );
-        println!("{}{}", text::green_text(&success), text::yellow_text("997"));
+        self.conclusion();
     }
 
     fn show_intro(&self) {
@@ -49,5 +45,19 @@ impl Game {
         let content = fs::read_to_string("resources/game_text.json")
             .expect("Failed to read game configuration");
         serde_json::from_str(&content).expect("Failed to parse game configuration")
+    }
+
+    // TODO: cleanup/polish ending
+    fn conclusion(&self) {
+        let success = format!(
+            "Congratulations, {}! You have proven yourself worthy.",
+            self.player.name()
+        );
+        println!("{}", text::green_text(&success));
+        println!("The code before you unlocks your prize -- and my freedom. May the light you carry guide you always.");
+        println!("\n{}\n", text::yellow_text("997"));
+        screen::continue_prompt();
+        clear_display();
+        screen::display_title();
     }
 }
